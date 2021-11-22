@@ -1,0 +1,15 @@
+
+@media(min-width: 600px){
+  .cardroot{
+    display: flex;
+  }
+  .cardroot .card{
+    max-width: 40%;
+    margin:30px;
+  }
+}
+
+.cardroot .card-title{
+  background-color: rgba(0, 0, 0 ,0.5);
+  padding: 5px 10px !important;
+}
