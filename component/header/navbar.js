@@ -89,13 +89,13 @@ function NavBar() {
                             </>
                         }
 
-                        <div className="col">
+                        {/* <div className="col">
                             <div className={isActive(`/reusable/showmodal1`)}>
                                 <Link href="/reusable/showmodal1">
                                     <a className="d-block color1 p-3">Check</a>
                                 </Link>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

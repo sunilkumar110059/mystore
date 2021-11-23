@@ -25,8 +25,9 @@ function DeleteAddItems({ ModalHandler, productDataById }) {
                 prodId: productDataById._id
             })
         })
-        let resultmes = await res.json()
-        console.log("resultmes", resultmes)
+        await res.json()
+        router.push('/')
+
     }
 
 
@@ -73,10 +74,10 @@ function DeleteAddItems({ ModalHandler, productDataById }) {
 
             {
                 userCookie.role === "admin" || userCookie.role === "root" ?
-                <div className="col-auto cursor-p ml-2">
-                    <div onClick={() => ModalHandler("ShowModals")} className="fullheight btn2 px-3 justify-content-center cursor-p"> Delete</div>
-                </div> :
-                ""
+                    <div className="col-auto cursor-p ml-2">
+                        <div onClick={() => ModalHandler("ShowModals")} className="fullheight btn2 px-3 justify-content-center cursor-p"> Delete</div>
+                    </div> :
+                    ""
             }
 
         </div>
