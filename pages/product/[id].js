@@ -7,33 +7,33 @@ import ModalWrap1 from '../../component/reusablecom/ModalWrap1';
 import LoadingWrap1 from '../../component/reusablecom/LoadingWrap1';
 
 
-export async function getStaticPaths() {
-    return {
-        paths: [
-            { params: { id: "618cd2971cbac920fde8c14b" } }
-        ],
-        fallback: true
-    };
-}
+// export async function getStaticPaths() {
+//     return {
+//         paths: [
+//             { params: { id: "618cd2971cbac920fde8c14b" } }
+//         ],
+//         fallback: true
+//     };
+// }
 
 
 
-export async function getStaticProps({ params: { id } }) {
-    const res = await fetch(`${baseUrl}/api/productApi/${id}`);
-    const data = await res.json()
-    return {
-        props: { productDataById: data }
-    }
-}
-
-
-// export async function getServerSideProps({ params: { id } }) {
+// export async function getStaticProps({ params: { id } }) {
 //     const res = await fetch(`${baseUrl}/api/productApi/${id}`);
 //     const data = await res.json()
 //     return {
 //         props: { productDataById: data }
 //     }
 // }
+
+
+export async function getServerSideProps({ params: { id } }) {
+    const res = await fetch(`${baseUrl}/api/productApi/${id}`);
+    const data = await res.json()
+    return {
+        props: { productDataById: data }
+    }
+}
 
 
 
