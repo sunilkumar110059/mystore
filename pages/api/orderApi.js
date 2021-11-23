@@ -3,13 +3,7 @@ import jwt from 'jsonwebtoken';
 import orderSchema from '../../admin/schema/orderSchema'
 
 ConnctionDB()
-export default async (req, res) => {
-    switch (req.method) {
-        case "GET":
-            await getOrderHistory(req, res);
-            break;
-    }
-}
+
 
 const getOrderHistory = async (req, res) => {
     const { authorization } = req.headers
@@ -26,4 +20,13 @@ const getOrderHistory = async (req, res) => {
         return res.status(401).json({ error: "Order History Processing Fail" })
     }
 
+}
+
+// Swith function start
+export default async (req, res) => {
+    switch (req.method) {
+        case "GET":
+            await getOrderHistory(req, res);
+            break;
+    }
 }

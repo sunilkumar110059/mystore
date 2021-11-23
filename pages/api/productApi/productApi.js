@@ -30,6 +30,7 @@ const postProductData = async (req, res) => {
 }
 
 
+// Swith function start
 export default async (req, res) => {
   switch (req.method) {
     case "GET":

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { InputFileWrap1, InputWrap1 } from '../../component/reusablecom/InputWrap1';
 
@@ -59,9 +60,8 @@ function FormsWrap() {
                             Inputvalue={mediaurl}
                             onChangeHandler={onChangeHandler}
                         />
-
                         <div className="ovr">
-                            {ImageUpload ? (<img style={{ width: "100px" }} src={URL.createObjectURL(ImageUpload)} alt="Upload Image" />) : ""}
+                            {ImageUpload ? (<Image style={{ width: "100px" }} src={URL.createObjectURL(ImageUpload)} alt="Upload Image" />) : ""}
                         </div>
                     </div>
                 </div>

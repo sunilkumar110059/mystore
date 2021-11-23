@@ -1,16 +1,6 @@
 import userSchema from '../../admin/schema/userschema';
 import jwt from 'jsonwebtoken';
 
-export default async (req, res) => {
-    switch (req.method) {
-        case "GET":
-            await getUserRoleApi(req, res);
-            break;
-        case "PUT":
-            await updateUserRoleApi(req, res);
-            break;
-    }
-}
 
 // getCartApi start
 const getUserRoleApi = async (req, res) => {
@@ -48,4 +38,17 @@ const updateUserRoleApi = async (req, res) => {
         return res.status(401).json({ error: "You must logged in" })
     }
 
+}
+
+
+// Swith function start
+export default async (req, res) => {
+    switch (req.method) {
+        case "GET":
+            await getUserRoleApi(req, res);
+            break;
+        case "PUT":
+            await updateUserRoleApi(req, res);
+            break;
+    }
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import baseUrl from '../../admin/baseUrl';
@@ -92,7 +93,7 @@ function Product({ productDataById }) {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-md-5"> <img className="shadow1 bordercolor2-2 border1 shadow1" src={`${productDataById.mediaurl}`} alt={productDataById.name} /></div>
+                    <div className="col-12 col-md-5"> <Image className="shadow1 bordercolor2-2 border1 shadow1" src={`${productDataById.mediaurl}`} alt={productDataById.name} /></div>
                     <div className="col-12 col-md-7">
                         <div className="fullheight">
                             <div className="toppart"> <div className="ovr font-size25 mb-2">{productDataById.name}</div>

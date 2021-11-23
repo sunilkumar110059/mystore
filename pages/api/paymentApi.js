@@ -6,16 +6,6 @@ import jwt from 'jsonwebtoken';
 
 const stripe = Stripe(process.env.STRIPE_SECRET)
 
-
-export default async (req, res) => {
-    switch (req.method) {
-        case "POST":
-            await postPaymentApi(req, res);
-            break;
-    }
-}
-
-
 const postPaymentApi = async (req, res) => {
     const { authorization } = req.headers
     const { paymentInfo } = req.body
@@ -76,5 +66,14 @@ const postPaymentApi = async (req, res) => {
     }
     catch (err) {
         return res.status(401).json({ error: "Error Processing Payment" })
+    }
+}
+
+// Swith function start
+export default async (req, res) => {
+    switch (req.method) {
+        case "POST":
+            await postPaymentApi(req, res);
+            break;
     }
 }

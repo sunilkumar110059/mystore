@@ -5,22 +5,6 @@ import jwt from 'jsonwebtoken';
 ConnctionDB();
 
 
-export default async (req, res) => {
-    switch (req.method) {
-
-        case "GET":
-            await getCartApi(req, res);
-            break;
-
-        case "PUT":
-            await addCartApi(req, res);
-            break;
-
-        case "DELETE":
-            await deleteCartApi(req, res);
-            break;
-    }
-}
 
 
 // getCartApi start
@@ -98,5 +82,24 @@ const deleteCartApi = async (req, res) => {
 
     } catch (err) {
         return res.status(401).json({ error: "You must logged in sdfas" })
+    }
+}
+
+
+// Swith function start
+export default async (req, res) => {
+    switch (req.method) {
+
+        case "GET":
+            await getCartApi(req, res);
+            break;
+
+        case "PUT":
+            await addCartApi(req, res);
+            break;
+
+        case "DELETE":
+            await deleteCartApi(req, res);
+            break;
     }
 }
