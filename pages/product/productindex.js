@@ -5,7 +5,7 @@ function ProductIndex({ data }) {
 
     return (
         <div className="row">
-            {data.map((curElem, index) => (
+            {data?.map((curElem, index) => (
                 <div className="col-12 col-md-3 mb-4" key={index}>
                     <div className="cover bordercolor2-2 border1 shadow1">
                         <Link href={'/product/[id]'} as={`/product/${curElem._id}`}>
