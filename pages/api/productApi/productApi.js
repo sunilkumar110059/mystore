@@ -5,6 +5,20 @@ import productSchema from '../../../admin/schema/productschema';
 
 ConnctionDB();
 
+// Swith function start
+export default async (req, res) => {
+  switch (req.method) {
+    case "GET":
+      await getProductData(req, res);
+      break;
+
+    case "POST":
+      await postProductData(req, res);
+      break;
+  }
+}
+
+
 const getProductData = async (req, res) => {
   try {
     const getdata = await productSchema.find()
@@ -30,16 +44,4 @@ const postProductData = async (req, res) => {
 }
 
 
-// Swith function start
-export default async (req, res) => {
-  switch (req.method) {
-    case "GET":
-      await getProductData(req, res);
-      break;
-
-    case "POST":
-      await postProductData(req, res);
-      break;
-  }
-}
 

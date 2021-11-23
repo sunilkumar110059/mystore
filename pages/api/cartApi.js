@@ -4,6 +4,23 @@ import jwt from 'jsonwebtoken';
 
 ConnctionDB();
 
+// Swith function start
+export default async (req, res) => {
+    switch (req.method) {
+
+        case "GET":
+            await getCartApi(req, res);
+            break;
+
+        case "PUT":
+            await addCartApi(req, res);
+            break;
+
+        case "DELETE":
+            await deleteCartApi(req, res);
+            break;
+    }
+}
 
 
 
@@ -86,20 +103,3 @@ const deleteCartApi = async (req, res) => {
 }
 
 
-// Swith function start
-export default async (req, res) => {
-    switch (req.method) {
-
-        case "GET":
-            await getCartApi(req, res);
-            break;
-
-        case "PUT":
-            await addCartApi(req, res);
-            break;
-
-        case "DELETE":
-            await deleteCartApi(req, res);
-            break;
-    }
-}

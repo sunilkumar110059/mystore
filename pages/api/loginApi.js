@@ -5,6 +5,21 @@ import userSchema from '../../admin/schema/userschema';
 
 ConnctionDB();
 
+// Swith function start
+export default async (req, res) => {
+    switch (req.method) {
+        case "GET":
+            await getLoginApi(req, res);
+            break;
+
+        case "POST":
+            await postLoginApi(req, res);
+            break;
+    }
+
+}
+
+
 
 // Get Login Api
 const getLoginApi = async (req, res) => {
@@ -63,16 +78,3 @@ async function postLoginApi(req, res) {
 
 
 
-// Swith function start
-export default async (req, res) => {
-    switch (req.method) {
-        case "GET":
-            await getLoginApi(req, res);
-            break;
-
-        case "POST":
-            await postLoginApi(req, res);
-            break;
-    }
-
-}
