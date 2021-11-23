@@ -30,9 +30,18 @@ import LoadingWrap1 from '../../component/reusablecom/LoadingWrap1';
 export async function getServerSideProps({ params: { id } }) {
     const res = await fetch(`${baseUrl}/api/productApi/${id}`);
     const data = await res.json()
+
+    if (!data) {
+        return {
+          redirect: {
+            destination: '/',
+            permanent: false,
+          },
+        }
+      }
+
     return {
-        props: { productDataById: data },
-        revalidate: 10,
+        props: { productDataById: data }
     }
 }
 
