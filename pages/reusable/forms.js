@@ -61,7 +61,7 @@ function FormsWrap() {
                         />
 
                         <div className="ovr">
-                            {ImageUpload ? (<img style={{ width: "100px" }} src={URL.createObjectURL(ImageUpload)} />) : ""}
+                            {ImageUpload ? (<img style={{ width: "100px" }} src={URL.createObjectURL(ImageUpload)} alt="Upload Image" />) : ""}
                         </div>
                     </div>
                 </div>

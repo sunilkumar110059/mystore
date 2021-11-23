@@ -8,7 +8,7 @@ function CartItems({ product }) {
     const router = useRouter();
     const [cartItems, setCartItems] = useState(product)
     const { token } = parseCookies()
-    
+
     const removeItems = async (Pid) => {
         const res = await fetch(`${baseUrl}/api/cartApi`, {
             method: "DELETE",
@@ -48,10 +48,10 @@ function CartItems({ product }) {
         <div className="wrapper">
             <div className="cover mb-4">
                 {cartItems.map((items, index) => {
-                 totalPrice += (items.quantity * items.productid.price)
+                    totalPrice += (items.quantity * items.productid.price)
                     return (
                         <div className="row mb-4" key={index} >
-                            <div className="col-12 col-md-2"> <img className="imgs" src={`${items.productid.mediaurl}`} />   </div>
+                            <div className="col-12 col-md-2"> <img className="imgs" src={`${items.productid.mediaurl}`} alt={items.productid.name} />   </div>
                             <div className="col-12 col-md-10">
                                 <div className="fullheight">
                                     <div className="toppart">
@@ -80,7 +80,7 @@ function CartItems({ product }) {
                     )
                 })
                 }
-            </div> 
+            </div>
 
             <div className="cover">
                 <div className="row no-gutters">
