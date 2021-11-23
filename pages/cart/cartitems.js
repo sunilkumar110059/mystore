@@ -104,7 +104,7 @@ function CartItems({ product }) {
                                 stripeKey="pk_test_51JwgM4SD83znHPTyCxb81Vytx4RqQl69nARKZRcwc6E5xZUbnpcVaSaupwnk9Foy9LHsSjPMIDVilqtFihGKbqFW00NJTs0p2l"
                                 token={(paymentInfo) => checkOutHandler(paymentInfo)}
                             >
-                                {cartItems.length == 0 ? " " : <div className="ovr btn1 py-2 px-3 cursor-p font-size20">  CHECKOUT</div>}
+                                {cartItems?.length == 0 ? " " : <div className="ovr btn1 py-2 px-3 cursor-p font-size20">  CHECKOUT</div>}
                             </StripeCheckout>
                         </div>
                     </div>
