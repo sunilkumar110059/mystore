@@ -48,7 +48,7 @@ function CartItems({ product }) {
     return (
         <div className="wrapper">
             <div className="cover mb-4">
-                {cartItems.map((items, index) => {
+                {cartItems?.map((items, index) => {
                     totalPrice += (items.quantity * items.productid.price)
                     return (
                         <div className="row mb-4" key={index} >

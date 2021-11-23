@@ -16,7 +16,7 @@ function AccountTtems({ product }) {
 
         <>
 
-            {product.map((curElem, index) => {
+            {product?.map((curElem, index) => {
 
                 return (<div className="cover border1 bordercolor2-3 mb-3" key={index}>
                     <div className="cover border-bottom1 bordercolor2-3 p-2 bg2-3" onClick={(e) => slideHandler(e, curElem._id)}>
