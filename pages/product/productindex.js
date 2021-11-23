@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { parseCookies } from 'nookies';
 
 function ProductIndex({ data }) {
-    const cookies = parseCookies()
+    
 
     return (
         <div className="row">
