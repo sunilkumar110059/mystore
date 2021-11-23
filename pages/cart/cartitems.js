@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { parseCookies } from 'nookies';
@@ -52,7 +52,7 @@ function CartItems({ product }) {
                     totalPrice += (items.quantity * items.productid.price)
                     return (
                         <div className="row mb-4" key={index} >
-                            <div className="col-12 col-md-2"> <Image className="imgs" src={`${items.productid.mediaurl}`} alt={items.productid.name} />   </div>
+                            <div className="col-12 col-md-2"> <img className="imgs" src={`${items.productid.mediaurl}`} alt={items.productid.name} />   </div>
                             <div className="col-12 col-md-10">
                                 <div className="fullheight">
                                     <div className="toppart">
