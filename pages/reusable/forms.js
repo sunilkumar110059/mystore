@@ -50,7 +50,6 @@ function FormsWrap() {
                             InputAddClass="border1 bordercolor2-2"
                             InputFaAddClass="fa_right bg1 color2-1"
                             InputAddClassFaIcon="fa-upload"
-                            InputAddClass="border1 bordercolor2-2"
                             HtmlForLabelAddClass={"fileupload1"}
                             FileValueText={mediaurl}
                             InputAutoComplete="off"
